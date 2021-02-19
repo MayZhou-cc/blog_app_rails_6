@@ -27,10 +27,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'guard-rspec', '~> 4.7'
+  gem 'guard-rubocop'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rubocop', '~> 0.65.0', require: false
+  gem 'terminal-notifier-guard'
 end
 
 group :development do
@@ -42,6 +45,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
@@ -50,6 +55,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  gem 'factory_bot_rails', '~> 4.8'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'timecop'
 end
 
 group :production do
