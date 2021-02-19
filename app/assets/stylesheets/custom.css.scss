@@ -1,5 +1,119 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html,
+body {
+  height: 100%;
+}
+
+h1 {
+  @media screen and (max-width: 900px){
+    font-size: 2em;
+  }
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: lightgray;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+// Home page
+#home-container {
+  margin-top: 1.5em;
+}
+
+.jumbotron {
+  background-image: asset-url('home_background1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+
+  @media screen and (max-width: 900px){
+    height: 600px;
+  }
+}
+
+#jumbotron-button {
+  @media screen and (max-width: 900px){
+    min-height: 20vh;
+  }
+  @media screen and (max-width: 350px){
+    min-height: 10vh;
+  }
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+
+  @media screen and (max-width: 700px) {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+  }
+}
+
+// articles page & show page
+.articles-buttons {
+  @media screen and (max-width: 700px) {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+  }
+
+  @media screen and (max-width: 300px) {
+    padding: 0.15rem 0.35rem;
+    font-size: 0.6rem;
+    line-height: 1;
+    border-radius: 0.2rem;
+  }
+}
+
+// form - from editing and new.
+.form-new-edit {
+  @media screen and (max-width: 770px) {
+    padding: 1em !important;
+    font-size: 0.8em !important;
+  }
+}
+
+.form-row {
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-row > label {
+  @media screen and (max-width: 991px) {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@import 'bootstrap/dist/css/bootstrap';
+
 .navbar {
   background-color: black !important;
 }
